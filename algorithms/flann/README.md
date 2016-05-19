@@ -16,45 +16,22 @@ We disabled the improved version of the distance computation and only use a sing
 
 ##Compile 
 
-enter src directory and run cmake .. and then make
+enter src directory and run 
 
-##Build and Search
+cmake .. 
 
+and then
 
+make
 
-Documentation
--------------
+##Build index
 
-Check FLANN web page [here](http://www.cs.ubc.ca/~mariusm/flann).
+build_hkmeans.sh, build_kdtree.sh, build_auto.sh
 
-Documentation on how to use the library can be found in the doc/manual.pdf file included in the release archives.
+Build Hierarchical KMeans tree, Randomized KDTree and the Flann index which is selected automatical.  
 
-More information and experimental results can be found in the following paper:
+##Search 
 
-  * Marius Muja and David G. Lowe, "Fast Approximate Nearest Neighbors with Automatic Algorithm Configuration", in International Conference on Computer Vision Theory and Applications (VISAPP'09), 2009 [(PDF)](http://people.cs.ubc.ca/~mariusm/uploads/FLANN/flann_visapp09.pdf) [(BibTex)](http://people.cs.ubc.ca/~mariusm/index.php/FLANN/BibTex)
+run_hkmeans.sh, run_kdtree.sh, run_auto.sh 
 
-
-Getting FLANN
--------------
-
-The latest version of FLANN can be downloaded from here:
-
- *  Version 1.8.4 (15 January 2013)
-    [flann-1.8.4-src.zip](http://people.cs.ubc.ca/~mariusm/uploads/FLANN/flann-1.8.4-src.zip) (Source code)  
-    [User manual](http://people.cs.ubc.ca/~mariusm/uploads/FLANN/flann_manual-1.8.4.pdf)  
-    [Changelog](https://github.com/mariusmuja/flann/blob/master/ChangeLog)  
-
-If you want to try out the latest changes or contribute to FLANN, then it's recommended that you checkout the git source repository: `git clone git://github.com/mariusmuja/flann.git`
-
-If you just want to browse the repository, you can do so by going [here](https://github.com/mariusmuja/flann).
-
-
-Conditions of use
------------------
-
-FLANN is distributed under the terms of the [BSD License](https://github.com/mariusmuja/flann/blob/master/COPYING).
-
-Bug reporting
--------------
-
-Please report bugs or feature requests using [github's issue tracker](http://github.com/mariusmuja/flann/issues).
+Note that, in our experiment paper, we use N value (retrived number of the data points) to achieve the trade-off between search speed and search quality (recall). The search performance (time and recall) results are kept in the Flann/results directory.
