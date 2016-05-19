@@ -4,7 +4,23 @@ FLANN - Fast Library for Approximate Nearest Neighbors
 FLANN is a library for performing fast approximate nearest neighbor searches in high dimensional spaces. This is a modified version of Flann. The original version can be found form  [here](http://www.cs.ubc.ca/~mariusm/flann). FLANN is written in C++ and contains bindings for the following languages: C, MATLAB and Python. We only evaluate the C++ results.
 
 Main differences:
-1.
+
+We disabled the improved version of the distance computation and only use a single thread.
+
+##Prerequisites:
+
+- A modern compiler that supports C++11 and G++ 4.7
+- Linux System 
+- HDF5 should be installed. 
+- [Sample data](https://github.com/DBWangGroupUNSW/nns_benchmark/tree/master/data) (e.g., audio) is downloaded, including data points, query points and ground truth results. Note that the input format is .hdf5 and all data files downloaded should be put to the knn_benchmark/data directory.
+
+##Compile 
+
+enter src directory and run cmake .. and then make
+
+##Build and Search
+
+
 
 Documentation
 -------------
