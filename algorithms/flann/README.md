@@ -16,7 +16,7 @@ We disabled the improved version of the distance computation and only use a sing
 
 ##Compile 
 
-enter src directory and run 
+enter code/build directory and run 
 
 cmake .. 
 
